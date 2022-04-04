@@ -53,13 +53,19 @@ function enviarPedido (elemento) {
 
     const precoTotal = Number(precoPrato.replace("R$","").replace(",",".")) + Number(precoBebida.replace("R$","").replace(",",".")) + Number(precoSobremesa.replace("R$","").replace(",","."))
     const total = precoTotal.toFixed(2).replace("." , ",")
+    
+    const nomePessoa = prompt ("Nos informe seu nome")
+    const endereco = prompt ("Agora nos diga qual o seu endereço")
 
     let mensagem;
     mensagem = `Olá, gostaria de fazer o pedido:
     - Prato: ${nomePrato}
     - Bebida: ${nomeBebida}
     - Sobremesa: ${nomeSobremesa}
-    Total: R$ ${total} `;
+    Total: R$ ${total} 
+    
+    Nome: ${nomePessoa}
+    Endereço: ${endereco}`;
     
     let uri = mensagem;
     let encode = encodeURIComponent(uri);
