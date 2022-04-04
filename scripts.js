@@ -38,6 +38,35 @@ function botaoFechar(){
     }
 }
 
+function enviarPedido (elemento) {
+    const prato = document.querySelector(".selecionado-prato");
+    const nomePrato = prato.querySelector(".nome-prato").innerHTML;
+    const precoPrato = prato.querySelector(".preco-prato").innerHTML;      
+    
+    const bebida = document.querySelector(".selecionado-bebida");
+    const nomeBebida = bebida.querySelector(".nome-bebida").innerHTML;
+    const precoBebida = bebida.querySelector(".preco-bebida").innerHTML;
+
+    const sobremesa = document.querySelector(".selecionado-sobremesa");       
+    const nomeSobremesa = sobremesa.querySelector(".nome-sobremesa").innerHTML;
+    const precoSobremesa = sobremesa.querySelector(".preco-sobremesa").innerHTML;
+
+    const precoTotal = Number(precoPrato.replace("R$","").replace(",",".")) + Number(precoBebida.replace("R$","").replace(",",".")) + Number(precoSobremesa.replace("R$","").replace(",","."))
+    const total = precoTotal.toFixed(2).replace("." , ",")
+
+    let mensagem;
+    mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${nomePrato}
+    - Bebida: ${nomeBebida}
+    - Sobremesa: ${nomeSobremesa}
+    Total: R$ ${total} `;
+    
+    let uri = mensagem;
+    let encode = encodeURIComponent(uri);
+
+    window.open("https://wa.me/5521965359598?text=" + encode);      
+}
+
 
 
 
