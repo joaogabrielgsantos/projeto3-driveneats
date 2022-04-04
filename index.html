@@ -19,16 +19,16 @@
         <h3 class="label">Primeiro, seu prato</h3>
         <div class="pratos">
             <div class="wrapper-content">
-                <div class="box-wrap" onclick="selecionarPrato()">
+                <div class="box-wrap" onclick="selecionarPrato(this)">
                     <img class="img-prato" src="/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
-                        <h4 class="nome-prato">Frango Yin Yang</h4>
-                        <p class="descricao-prato">Um pouco de batata, um pouco de salada</p>
+                        <h4 class="nome-prato">Bife com fritas</h4>
+                        <p class="descricao-prato">Carne macia e fritas crocantes</p>
                         <h5 class="preco-prato">R$ 20,90</h5>
                     </div>
                 </div>
-                <div class="box-wrap" onclick="selecionarPrato()">
+                <div class="box-wrap" onclick="selecionarPrato(this)">
                     <img class="img-prato" src="/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
@@ -37,12 +37,12 @@
                         <h5 class="preco-prato">R$ 26,99</h5>
                     </div>
                 </div>
-                <div class="box-wrap" onclick="selecionarPrato()">
+                <div class="box-wrap" onclick="selecionarPrato(this)">
                     <img class="img-prato" src="/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
-                        <h4 class="nome-prato">Frango Yin Yang</h4>
-                        <p class="descricao-prato">Um pouco de batata, um pouco de salada</p>
+                        <h4 class="nome-prato">Lasanha</h4>
+                        <p class="descricao-prato">Um pouco de queijo e alegria</p>
                         <h5 class="preco-prato">R$ 14,90</h5>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         <h3 class="label">Agora, sua bebida</h3>
         <div class="bebidas">
             <div class="wrapper-content">
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarBebida(this)">
                     <img class="img-bebida" src="/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
@@ -62,16 +62,16 @@
                         <h5 class="preco-bebida">R$ 4,90</h5>
                     </div>
                 </div>
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarBebida(this)">
                     <img class="img-bebida" src="/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
                         <h4 class="nome-bebida">Vinho tinto</h4>
-                        <p class="descricao-bebida">Lata 350ml</p>
+                        <p class="descricao-bebida">Garrafa 1L</p>
                         <h5 class="preco-bebida">R$ 35,00</h5>
                     </div>
                 </div>
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarBebida(this)">
                     <img class="img-bebida" src="/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
@@ -86,30 +86,30 @@
         <h3 class="label">Por fim, sua sobremesa</h3>
         <div class="sobremesas">
             <div class="wrapper-content">
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarSobremesa(this)">
                     <img class="img-sobremesa" src="/projeto3-driveneats/imagens/pudim 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
                         <h4 class="nome-sobremesa">Pudim</h4>
-                        <p class="descricao-sobremesa">Apenas pudim</p>
+                        <p class="descricao-sobremesa">Apenas o melhor</p>
                         <h5 class="preco-sobremesa">R$ 7,90</h5>
                     </div>
                 </div>
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarSobremesa(this)">
                     <img class="img-sobremesa" src="/projeto3-driveneats/imagens/pudim 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
-                        <h4 class="nome-sobremesa">Pudim</h4>
-                        <p class="descricao-sobremesa">Apenas pudim</p>
+                        <h4 class="nome-sobremesa">Bolo de chocolate</h4>
+                        <p class="descricao-sobremesa">Perfeição</p>
                         <h5 class="preco-sobremesa">R$ 9,90</h5>
                     </div>
                 </div>
-                <div class="box-wrap">
+                <div class="box-wrap" onclick="selecionarSobremesa(this)">
                     <img class="img-sobremesa" src="/projeto3-driveneats/imagens/pudim 1.png">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <div class="info">
-                        <h4 class="nome-sobremesa">Pudim</h4>
-                        <p class="descricao-sobremesa">Apenas pudim</p>
+                        <h4 class="nome-sobremesa">Torta</h4>
+                        <p class="descricao-sobremesa">Estrela da casa</p>
                         <h5 class="preco-sobremesa">R$ 17,50</h5>
                     </div>
                 </div>
@@ -118,9 +118,9 @@
     </section>
 
     <footer>
-        <div class="fechar-pedido escondido">
+        <a href="" class="fechar-pedido escondido">
             <h6>Fechar pedido</h6>
-        </div>
+        </a>
         <div class="msg-selecionar">
             <h6>Selecione os 3 itens <br> para fechar o pedido</h6>
         </div>
